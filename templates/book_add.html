@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            Admin Book Manager(Add)
+        </title>
+    </head>
+    <body>
+        <h1>Admin Book Addition</h1><br />
+
+        <table style="width:100%">
+            <caption><b>Library</b></caption>
+            <thead>
+                <tr>
+                    <th>Book ID</th>
+                    <th>Book Title</th>
+                    <th>Author</th>
+                    <th>Issue Status</th>
+                    <th>User Issued</th>
+                    <th>Date Issued</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for books in books %}
+                <tr>
+                    <td>{{books.bid}}</td>
+                    <td>{{books.btitle}}</td>
+                    <td>{{books.author}}</td>
+                    <td>{{books.status}}</td>
+                    <td>{{books.user}}</td>
+                    <td>{{books.date}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <br />
+        <h2>Add Book</h2>
+        <br />
+
+        <form action='' method="POST">
+            {% csrf_token %}
+            <label for="btitle">Book Title:</label>
+            <input type="text" id="btitle"name="btitle" /><br />
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" /><br />
+            <input type="submit" value="Add New Book" />
+        </form>
+    </body>
+</html>

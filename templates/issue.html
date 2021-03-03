@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            Issue Book(s)
+        </title>
+    </head>
+    <body>
+        <h1>Issue Books</h1>
+        <table style="width:25%">
+            <caption>Available Books</caption>
+            <thead>
+                <tr>
+                    <th>Book ID</th>
+                    <th>Book Title</th>
+                    <th>Author</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for books in books %}
+                <tr>
+                    <td>{{books.bid}}</td>
+                    <td>{{books.btitle}}</td>
+                    <td>{{books.author}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <br />
+        <form action="" method="POST">
+            {% csrf_token %}
+            <input type='number' id="bid" name="bid" value="bid" /><br />
+            Enter the Book ID of the book<br />
+            <input type="Submit" value="Issue Selected Books" />
+        </form>
+    </body>
+</html>

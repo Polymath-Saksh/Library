@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <title>
+        Return Book(s)
+    </title>
+</head>
+<body>
+    <h1>Return Books</h1>
+    <table style="width:50%">
+        <caption>Available Books</caption>
+        <thead>
+            <tr>
+                <th>Book ID</th>
+                <th>Book Title</th>
+                <th>Author</th>
+                <th>Date Issued</th>
+                <th>Fine(if date exceeded)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for books in books %}
+            <tr>
+                <td>{{books.bid}}</td>
+                <td>{{books.btitle}}</td>
+                <td>{{books.author}}</td>
+                <td>{{books.date}}</td>
+                <td>{{books.fine}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br />
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type='number' id="bid" name="bid" value="bid" /><br />
+        Enter the Book ID of the book<br />
+        <input type="Submit" value="Return Selected Books" />
+    </form>
+</body>
+</html>

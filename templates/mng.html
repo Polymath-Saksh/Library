@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: lawngreen;
+        }
+        table{
+            background-color:lightcyan;
+            border:solid;
+        }
+    </style>
+    <title>
+        Book Manager
+    </title>
+</head>
+<body>
+    <h1>Book Manager</h1>
+    <table style="width:100%">
+        <caption>Library</caption>
+        <thead>
+            <tr>
+                <th>Book ID</th>
+                <th>Book Title</th>
+                <th>Author</th>
+                <th>Issue Status</th>
+                <th>User Issued</th>
+                <th>Date Issued</th>
+                <th>Fine(if date exceeded)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for books in books %}
+            <tr>
+                <td>{{books.bid}}</td>
+                <td>{{books.btitle}}</td>
+                <td>{{books.author}}</td>
+                <td>{{books.status}}</td>
+                <td>{{books.user}}</td>
+                <td>{{books.date}}</td>
+                <td>{{books.fine}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <br />
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label for="query">Search:</label>
+        <input type="text" id="query" name="query" /><br />
+        <input type="Submit" value="OK" />
+    </form>
+
+    <br />
+
+    <table style="width:100%">
+        <caption>Search Results</caption>
+        <thead>
+            <tr>
+                <th>Book ID</th>
+                <th>Book Title</th>
+                <th>Author</th>
+                <th>Issue Status</th>
+                <th>User Issued</th>
+                <th>Date Issued</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for search in search %}
+            <tr>
+                <td>{{search.bid}}</td>
+                <td>{{search.btitle}}</td>
+                <td>{{search.author}}</td>
+                <td>{{search.status}}</td>
+                <td>{{search.user}}</td>
+                <td>{{search.date}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
