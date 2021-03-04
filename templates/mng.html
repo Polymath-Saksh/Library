@@ -2,12 +2,18 @@
 <html>
 <head>
     <style>
+        table, th, td {
+            text-align: center
+        }
+    </style>
+    <style>
         body {
             background-color: lawngreen;
         }
-        table{
-            background-color:lightcyan;
-            border:solid;
+
+        table {
+            background-color: lightcyan;
+            border: solid;
         }
     </style>
     <title>
@@ -16,6 +22,14 @@
 </head>
 <body>
     <h1>Book Manager</h1>
+    <br />
+    <a href="http://localhost:8000/mng/">Book Manager</a>
+    <a href="http://localhost:8000/issue/">Issue Book(s)</a>
+    <a href="http://localhost:8000/accounts/logout">Logout</a>
+    <a href="http://localhost:8000/book_add/">Admin Book Addition</a>
+    <a href="http://localhost:8000/book_delete/">Admin Book Deletion</a>
+    <a href="http://localhost:8000/returns/">Return Book(s)</a>
+    <br />
     <table style="width:100%">
         <caption>Library</caption>
         <thead>
@@ -43,7 +57,7 @@
             {% endfor %}
         </tbody>
     </table>
-    
+
     <br />
 
     <form action="" method="POST">
