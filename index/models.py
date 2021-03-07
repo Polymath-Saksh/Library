@@ -9,7 +9,7 @@ class Books(models.Model):
     status=models.CharField(max_length=10,choices=choices,default='Available')
     user=models.CharField(max_length=30,null=False,blank=True)
     date=models.DateField(blank=True)
-    fine=models.IntegerField(blank=True,null=True)
+    fine=models.IntegerField(blank=True,null=False,default=0)
 
     def __str__(self):
         return self.bid

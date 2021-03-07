@@ -3,6 +3,7 @@ from index.models import Books
 from django.db.models import Q
 from django import forms
 from book_add.views import Truncator
+from datetime import date,timedelta
 def m(request):
     books=Books.objects.all()
     context={'books':books}
