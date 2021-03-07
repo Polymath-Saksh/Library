@@ -3,19 +3,34 @@
 <head>
     <style>
         table, th, td {
-            text-align: center
+        border: 1px solid black;
+        border-collapse: collapse;
         }
-    </style>
-    <style>
+
+        th {
+        background-color: aqua;
+        }
+
+        tr:nth-child(even) {
+        background-color: lightblue;
+        }
+
         body {
-            background-color: lawngreen;
+        background-color: lightgreen;
+
         }
 
         table {
-            background-color: lightcyan;
-            border: solid;
+        background-color: mintcream;
+        border: solid;
+        text-align: center;
         }
-    </style>
+
+        table.center {
+        margin-left: auto;
+        margin-right: auto;
+        }
+     </style>
     <title>
         Return Book(s)
     </title>
