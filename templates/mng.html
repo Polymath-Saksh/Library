@@ -3,18 +3,34 @@
 <head>
     <style>
         table, th, td {
-            text-align: center
+            border: 1px solid black;
+            border-collapse: collapse;
         }
-    </style>
-    <style>
+
+        th {
+            background-color: aqua;
+        }
+
+        tr:nth-child(even) {
+            background-color: lightblue;
+        }
+
         body {
-            background-color: lawngreen;
+            background-color: lightgreen;
+            background-image: url('https://www.wallpapertip.com/wmimgs/0-3795_wallpaper-books-library-shelves-lighting-hd-book-library.jpg');
+            background-size: cover;
         }
 
         table {
-            background-color: lightcyan;
+            background-color: mintcream;
             border: solid;
+            text-align: center;
         }
+
+            table.center {
+                margin-left: auto;
+                margin-right: auto;
+            }
     </style>
     <title>
         Book Manager
