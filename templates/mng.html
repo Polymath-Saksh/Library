@@ -43,17 +43,12 @@
             background-image: url('https://www.wallpapertip.com/wmimgs/0-3795_wallpaper-books-library-shelves-lighting-hd-book-library.jpg');
             background-size: cover;
         }
-
+        
         table {
             background-color: mintcream;
             border: solid;
             text-align: center;
         }
-
-            table.center {
-                margin-left: auto;
-                margin-right: auto;
-            }
     </style>
     <title>
         Book Manager
@@ -64,12 +59,10 @@
     <br />
     <a href="http://localhost:8000/mng/">Book Manager</a>
     <a href="http://localhost:8000/issue/">Issue Book(s)</a>
-    <a href="http://localhost:8000/accounts/logout">Logout</a>
-    <a href="http://localhost:8000/book_add/">Admin Book Addition</a>
-    <a href="http://localhost:8000/book_delete/">Admin Book Deletion</a>
     <a href="http://localhost:8000/returns/">Return Book(s)</a>
+    <a href="http://localhost:8000/accounts/logout">Logout</a>
     <br />
-    <table style="width:100%">
+    <table style="width:75%">
         <caption>Library</caption>
         <thead>
             <tr>
@@ -91,7 +84,7 @@
                 <td>{{books.status}}</td>
                 <td>{{books.user}}</td>
                 <td>{{books.date}}</td>
-                <td>{{books.fine}}</td>
+                <td>Rs.{{books.fine}}</td>
             </tr>
             {% endfor %}
         </tbody>
