@@ -37,11 +37,11 @@
 </head>
 
     <body>
-        <form method="post">
+        <form method="post" style="color:aliceblue">
             {% csrf_token %}
             {{form.as_p}}
             <input type="submit" value="Login"><br />
-            <p>Not a registered user?</p>
+            <p style="color:aliceblue">Not a registered user?</p>
             <button href="http://localhost:8000/accounts/sign_up">Signup</button>
         </form>
     </body>

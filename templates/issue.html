@@ -47,28 +47,29 @@
         table {
             background-color: mintcream;
             border: solid;
-            text-align: center;
+            text-align: center
         }
-
-            table.center {
-                margin-left: auto;
-                margin-right: auto;
-            }
+        div{
+            margin-left:auto;
+            margin-right:auto;
+        }
     </style>
     <title>
         Issue Book(s)
     </title>
 </head>
 <body>
-    <h1>Issue Books</h1>
+    <h1 style="color:aliceblue;" >Issue Books</h1>
     <br />
+    <div>
     <a href="http://localhost:8000/mng/">Book Manager</a>
     <a href="http://localhost:8000/issue/">Issue Book(s)</a>
     <a href="http://localhost:8000/returns/">Return Book(s)</a>
     <a href="http://localhost:8000/accounts/logout">Logout</a>
-    <br />
-    <table style="width:25%">
-        <caption>Available Books</caption>
+    </div>
+    <br /><br />
+    <table style="width:40%;float:left">
+        <caption style="color:aliceblue">Available Books</caption>
         <thead>
             <tr>
                 <th>Book ID</th>
@@ -87,7 +88,7 @@
         </tbody>
     </table>
     <br />
-    <form action="" method="POST">
+    <form action="" method="POST" style="color: #C0C0C0;float:right">
         {% csrf_token %}
         <input type='number' id="bid" name="bid" value="bid" /><br />
         Enter the Book ID of the book<br />

@@ -2,6 +2,10 @@
 <html>
 <head>
     <style>
+        title {
+            color: red
+        }
+
         a:link {
             color: green;
             background-color: transparent;
@@ -25,6 +29,7 @@
             background-color: transparent;
             text-decoration: underline;
         }
+
         table, th, td {
             border: 1px solid black;
             border-collapse: collapse;
@@ -43,7 +48,7 @@
             background-image: url('https://www.wallpapertip.com/wmimgs/0-3795_wallpaper-books-library-shelves-lighting-hd-book-library.jpg');
             background-size: cover;
         }
-        
+
         table {
             background-color: mintcream;
             border: solid;
@@ -55,15 +60,17 @@
     </title>
 </head>
 <body>
-    <h1>Book Manager</h1>
+    <h1 style="color:gainsboro">Book Manager</h1>
     <br />
-    <a href="http://localhost:8000/mng/">Book Manager</a>
-    <a href="http://localhost:8000/issue/">Issue Book(s)</a>
-    <a href="http://localhost:8000/returns/">Return Book(s)</a>
-    <a href="http://localhost:8000/accounts/logout">Logout</a>
+    <div style="float:left">
+        <a href="http://localhost:8000/mng/">Book Manager</a>
+        <a href="http://localhost:8000/issue/">Issue Book(s)</a>
+        <a href="http://localhost:8000/returns/">Return Book(s)</a>
+        <a href="http://localhost:8000/accounts/logout">Logout</a>
+    </div>
     <br />
-    <table style="width:75%">
-        <caption>Library</caption>
+    <table style="width:75%;float:left">
+        <caption style="color:gainsboro">Library</captionstyle="color:gainsboro">
         <thead>
             <tr>
                 <th>Book ID</th>
@@ -92,17 +99,17 @@
 
     <br />
 
-    <form action="" method="POST">
+    <form action="" method="POST"style="float:right">
         {% csrf_token %}
-        <label for="query">Search:</label>
-        <input type="text" id="query" name="query" /><br />
-        <input type="Submit" value="OK" />
+        <label for="query" style="color:gainsboro">Search:</label><br />
+        <input type="text" id="query" name="query" />
+        <input type="Submit" value="Proceed" />
     </form>
 
     <br />
 
-    <table style="width:100%">
-        <caption>Search Results</caption>
+    <table style="width:50%">
+        <caption style="color:gainsboro">Search Results</caption>
         <thead>
             <tr>
                 <th>Book ID</th>
