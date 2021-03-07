@@ -31,28 +31,18 @@
                 margin-left: auto;
                 margin-right: auto;
             }
-        a:link {
-            color: green;
-            background-color: transparent;
+
+        a:link, a:visited {
+            background-color: #f44336;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
             text-decoration: none;
+            display: inline-block;
         }
 
-        a:visited {
-            color: pink;
-            background-color: transparent;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: red;
-            background-color: transparent;
-            text-decoration: underline;
-        }
-
-        a:active {
-            color: yellow;
-            background-color: transparent;
-            text-decoration: underline;
+        a:hover, a:active {
+            background-color: red;
         }
     </style>
     <title>
@@ -60,7 +50,8 @@
     </title>
 </head>
 <body>
-    <h1 style="color:aliceblue">Admin Book Deletion</h1><br />
+    <h1 style="color:gainsboro">Admin Book Deletion</h1><br />
+    <p style="float:right;color:gainsboro">User:{{user}}</p>
     <br />
     <a href="http://localhost:8000/mng/">Book Manager</a>
     <a href="http://localhost:8000/issue/">Issue Book(s)</a>
@@ -69,8 +60,8 @@
     <a href="http://localhost:8000/book_delete/">Admin Book Deletion</a>
     <a href="http://localhost:8000/returns/">Return Book(s)</a>
     <br />
-    <table style="width:100%">
-        <caption style="color:aliceblue"><ul><b>Library</b></ul></caption>
+    <table style="width:75%">
+        <caption style="color:gainsboro"><ul><b>Library</b></ul></caption>
         <thead>
             <tr>
                 <th>Book ID</th>
@@ -96,10 +87,10 @@
     </table>
 
     <br />
-    <h2>Delete Book</h2>
+    <h2 style='color:gainsboro'>Delete Book</h2>
     <br />
 
-    <form action='' method="POST">
+    <form action='' method="POST" style='color:gainsboro'>
         {% csrf_token %}
         <label for="id">Enter a few characters of the Book Title or Author:</label>
         <input type="text" id="id" name="id" /><br />

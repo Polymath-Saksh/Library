@@ -6,28 +6,17 @@
             color: red
         }
 
-        a:link {
-            color: green;
-            background-color: transparent;
+        a:link, a:visited {
+            background-color: #f44336;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
             text-decoration: none;
+            display: inline-block;
         }
 
-        a:visited {
-            color: pink;
-            background-color: transparent;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: red;
-            background-color: transparent;
-            text-decoration: underline;
-        }
-
-        a:active {
-            color: yellow;
-            background-color: transparent;
-            text-decoration: underline;
+        a:hover, a:active {
+            background-color: red;
         }
 
         table, th, td {
@@ -61,6 +50,7 @@
 </head>
 <body>
     <h1 style="color:gainsboro">Book Manager</h1>
+    <p style="float:right;color:gainsboro">User:{{user}}</p>
     <br />
     <div style="float:left">
         <a href="http://localhost:8000/mng/">Book Manager</a>
@@ -70,7 +60,7 @@
     </div>
     <br />
     <table style="width:75%;float:left">
-        <caption style="color:gainsboro">Library</captionstyle="color:gainsboro">
+        <caption style="color:gainsboro">Library</caption>
         <thead>
             <tr>
                 <th>Book ID</th>

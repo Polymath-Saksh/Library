@@ -2,29 +2,19 @@
 <html>
 <head>
     <style>
-        a:link {
-            color: green;
-            background-color: transparent;
+        a:link, a:visited {
+            background-color: #f44336;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
             text-decoration: none;
+            display: inline-block;
         }
 
-        a:visited {
-            color: pink;
-            background-color: transparent;
-            text-decoration: none;
+        a:hover, a:active {
+            background-color: red;
         }
 
-        a:hover {
-            color: red;
-            background-color: transparent;
-            text-decoration: underline;
-        }
-
-        a:active {
-            color: yellow;
-            background-color: transparent;
-            text-decoration: underline;
-        }
         table, th, td {
         border: 1px solid black;
         border-collapse: collapse;
@@ -62,11 +52,12 @@
 </head>
 <body>
     <h1 style="color:aliceblue">Return Books</h1>
+    <p style="float:right;color:gainsboro">User:{{user}}</p>
     <br />
     <a href="http://localhost:8000/mng/">Book Manager</a>
     <a href="http://localhost:8000/issue/">Issue Book(s)</a>
-    <a href="http://localhost:8000/accounts/logout">Logout</a>
     <a href="http://localhost:8000/returns/">Return Book(s)</a>
+    <a href="http://localhost:8000/accounts/logout">Logout</a>
     <br /><br />
     <table style="width:50%">
         <caption style="color:aliceblue">Available Books</caption>
@@ -94,7 +85,7 @@
     <br />
     <form action="" method="POST" style="color:aliceblue;float:right">
         {% csrf_token %}
-        <input type='number' id="bid" name="bid" value="bid"/><br />
+        <input type='number' id="bid" name="bid" value="bid" /><br />
         Enter the Book ID of the book<br />
         <input type="Submit" value="Return Selected Books" />
     </form>

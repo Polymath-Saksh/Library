@@ -2,29 +2,19 @@
 <html>
 <head>
     <style>
-        a:link {
-            color: green;
-            background-color: transparent;
+        a:link, a:visited {
+            background-color: #f44336;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
             text-decoration: none;
+            display: inline-block;
         }
 
-        a:visited {
-            color: pink;
-            background-color: transparent;
-            text-decoration: none;
+        a:hover, a:active {
+            background-color: red;
         }
 
-        a:hover {
-            color: red;
-            background-color: transparent;
-            text-decoration: underline;
-        }
-
-        a:active {
-            color: yellow;
-            background-color: transparent;
-            text-decoration: underline;
-        }
         table, th, td {
             border: 1px solid black;
             border-collapse: collapse;
@@ -59,6 +49,7 @@
 </head>
 <body>
     <h1 style="color:aliceblue"><u>Admin Book Addition</u></h1><br />
+    <p style="float:right;color:gainsboro">User:{{user}}</p>
     <br />
     <a href="http://localhost:8000/mng/">Book Manager</a>
     <a href="http://localhost:8000/issue/">Issue Book(s)</a>
@@ -67,8 +58,8 @@
     <a href="http://localhost:8000/book_delete/">Admin Book Deletion</a>
     <a href="http://localhost:8000/returns/">Return Book(s)</a>
     <br />
-    <table style="width:75%">
-        <caption><b>Library</b></caption>
+    <table style="width:25%;float:left">
+        <caption style="color:aliceblue"><b>Library</b></caption>
         <thead>
             <tr>
                 <th>Book ID</th>
@@ -88,15 +79,14 @@
     </table>
 
     <br />
-    <h2><u>Add Book</u></h2>
     <br />
 
-    <form action='' method="POST">
+    <form action='' method="POST" style="float:right;color:aliceblue">
         {% csrf_token %}
         <label for="btitle">Book Title:</label>
         <input type="text" id="btitle" name="btitle" />
         <label for="author">Author:</label>
-        <input type="text" id="author" name="author" /><br /><br />
+        <input type="text" id="author" name="author" /><br />
         <input type="submit" value="Add New Book" />
     </form>
 </body>
