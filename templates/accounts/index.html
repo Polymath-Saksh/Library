@@ -5,20 +5,31 @@
         Main Page
     </title>>
     <style>
-    body { background-color: lightgreen;
-           background-image: url('https://www.wallpapertip.com/wmimgs/0-3795_wallpaper-books-library-shelves-lighting-hd-book-library.jpg');
-           background-size: cover;
+    body {
+        background-color: lightgreen;
+        background-image: url('https://www.wallpapertip.com/wmimgs/0-3795_wallpaper-books-library-shelves-lighting-hd-book-library.jpg');
+        background-size: cover;
     }
+        a:link, a:visited {
+            background-color: #f44336;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        a:hover, a:active {
+            background-color: red;
+        }
     </style>
 </head>
-    <body>
-        <h1>Welcome {{user}}</h1>
-        <br />
-        <a href="mng/">Book Manager</a><br />
-        <a href="issue/">Issue Book(s)</a><br />
-        <a href="accounts/logout">Logout</a><br />
-        <a href="book_add/">Admin Book Addition</a><br />
-        <a href="book_delete/">Admin Book Deletion</a><br />
-        <a href="returns/">Return Book(s)</a>
-    </body>
+<body>
+    <h1 style="color:aliceblue">Welcome {{user}}</h1>
+    <br />
+    <a href="mng/">Book Manager</a>
+    <a href="issue/">Issue Book(s)</a>
+    <a href="returns/">Return Book(s)</a>
+    <a href="accounts/logout">Logout</a>
+</body>
 </html>

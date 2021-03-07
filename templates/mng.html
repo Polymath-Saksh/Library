@@ -2,6 +2,23 @@
 <html>
 <head>
     <style>
+        title {
+            color: red
+        }
+
+        a:link, a:visited {
+            background-color: #f44336;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        a:hover, a:active {
+            background-color: red;
+        }
+
         table, th, td {
             border: 1px solid black;
             border-collapse: collapse;
@@ -26,28 +43,24 @@
             border: solid;
             text-align: center;
         }
-
-            table.center {
-                margin-left: auto;
-                margin-right: auto;
-            }
     </style>
     <title>
         Book Manager
     </title>
 </head>
 <body>
-    <h1>Book Manager</h1>
+    <h1 style="color:gainsboro">Book Manager</h1>
+    <p style="float:right;color:gainsboro">User:{{user}}</p>
     <br />
-    <a href="http://localhost:8000/mng/">Book Manager</a>
-    <a href="http://localhost:8000/issue/">Issue Book(s)</a>
-    <a href="http://localhost:8000/accounts/logout">Logout</a>
-    <a href="http://localhost:8000/book_add/">Admin Book Addition</a>
-    <a href="http://localhost:8000/book_delete/">Admin Book Deletion</a>
-    <a href="http://localhost:8000/returns/">Return Book(s)</a>
+    <div style="float:left">
+        <a href="http://localhost:8000/mng/">Book Manager</a>
+        <a href="http://localhost:8000/issue/">Issue Book(s)</a>
+        <a href="http://localhost:8000/returns/">Return Book(s)</a>
+        <a href="http://localhost:8000/accounts/logout">Logout</a>
+    </div>
     <br />
-    <table style="width:100%">
-        <caption>Library</caption>
+    <table style="width:75%;float:left">
+        <caption style="color:gainsboro">Library</caption>
         <thead>
             <tr>
                 <th>Book ID</th>
@@ -68,7 +81,7 @@
                 <td>{{books.status}}</td>
                 <td>{{books.user}}</td>
                 <td>{{books.date}}</td>
-                <td>{{books.fine}}</td>
+                <td>Rs.{{books.fine}}</td>
             </tr>
             {% endfor %}
         </tbody>
@@ -76,17 +89,17 @@
 
     <br />
 
-    <form action="" method="POST">
+    <form action="" method="POST"style="float:right">
         {% csrf_token %}
-        <label for="query">Search:</label>
-        <input type="text" id="query" name="query" /><br />
-        <input type="Submit" value="OK" />
+        <label for="query" style="color:gainsboro">Search:</label><br />
+        <input type="text" id="query" name="query" />
+        <input type="Submit" value="Proceed" />
     </form>
 
     <br />
 
-    <table style="width:100%">
-        <caption>Search Results</caption>
+    <table style="width:50%">
+        <caption style="color:gainsboro">Search Results</caption>
         <thead>
             <tr>
                 <th>Book ID</th>

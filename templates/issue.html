@@ -2,6 +2,19 @@
 <html>
 <head>
     <style>
+        a:link, a:visited {
+            background-color: #f44336;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        a:hover, a:active {
+            background-color: red;
+        }
+
         table, th, td {
             border: 1px solid black;
             border-collapse: collapse;
@@ -24,53 +37,53 @@
         table {
             background-color: mintcream;
             border: solid;
-            text-align: center;
+            text-align: center
         }
-
-            table.center {
-                margin-left: auto;
-                margin-right: auto;
-            }
+        div{
+            margin-left:auto;
+            margin-right:auto;
+        }
     </style>
     <title>
         Issue Book(s)
     </title>
 </head>
-    <body>
-        <h1>Issue Books</h1>
-        <br />
+<body>
+    <h1 style="color:aliceblue;">Issue Books</h1>
+    <p style="float:right;color:gainsboro">User:{{user}}</p>
+    <br />
+    <div>
         <a href="http://localhost:8000/mng/">Book Manager</a>
         <a href="http://localhost:8000/issue/">Issue Book(s)</a>
-        <a href="http://localhost:8000/accounts/logout">Logout</a>
-        <a href="http://localhost:8000/book_add/">Admin Book Addition</a>
-        <a href="http://localhost:8000/book_delete/">Admin Book Deletion</a>
         <a href="http://localhost:8000/returns/">Return Book(s)</a>
-        <br />
-        <table style="width:25%">
-            <caption>Available Books</caption>
-            <thead>
-                <tr>
-                    <th>Book ID</th>
-                    <th>Book Title</th>
-                    <th>Author</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for books in books %}
-                <tr>
-                    <td>{{books.bid}}</td>
-                    <td>{{books.btitle}}</td>
-                    <td>{{books.author}}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-        <br />
-        <form action="" method="POST">
-            {% csrf_token %}
-            <input type='number' id="bid" name="bid" value="bid" /><br />
-            Enter the Book ID of the book<br />
-            <input type="Submit" value="Issue Selected Books" />
-        </form>
-    </body>
+        <a href="http://localhost:8000/accounts/logout">Logout</a>
+    </div>
+    <br /><br />
+    <table style="width:40%;float:left">
+        <caption style="color:aliceblue">Available Books</caption>
+        <thead>
+            <tr>
+                <th>Book ID</th>
+                <th>Book Title</th>
+                <th>Author</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for books in books %}
+            <tr>
+                <td>{{books.bid}}</td>
+                <td>{{books.btitle}}</td>
+                <td>{{books.author}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br />
+    <form action="" method="POST" style="color: #C0C0C0;float:right">
+        {% csrf_token %}
+        <input type='number' id="bid" name="bid" value="bid" /><br />
+        Enter the Book ID of the book<br />
+        <input type="Submit" value="Issue Selected Books" />
+    </form>
+</body>
 </html>

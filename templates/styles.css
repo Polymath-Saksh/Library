@@ -1,0 +1,49 @@
+        title{
+            color:red
+        }
+        a:link {
+            color: green;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:visited {
+            color: pink;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: red;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: aqua;
+        }
+
+        tr:nth-child(even) {
+            background-color: lightblue;
+        }
+
+        body {
+            background-color: lightgreen;
+            background-image: url('https://www.wallpapertip.com/wmimgs/0-3795_wallpaper-books-library-shelves-lighting-hd-book-library.jpg');
+            background-size: cover;
+        }
+        
+        table {
+            background-color: mintcream;
+            border: solid;
+            text-align: center;
+        }
