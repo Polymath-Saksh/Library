@@ -16,5 +16,3 @@ def i(request):
         issue.update(status='Issued',user=username,date=today)
     Truncator()
     return render(request,'issue.html',context)
-
-# Create your views here.

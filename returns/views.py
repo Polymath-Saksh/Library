@@ -20,4 +20,3 @@ def r(request):
         Books.objects.filter(bid=id).update(user='',date=None,status='Available')
         Truncator()
     return render(request,'returns.html',context)
-# Create your views here.

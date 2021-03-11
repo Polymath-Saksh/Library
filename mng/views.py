@@ -16,4 +16,3 @@ def m(request):
     Truncator()
     context={'books':books}
     return render(request,'mng.html',context)
-# Create your views here.
